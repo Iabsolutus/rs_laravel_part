@@ -1,0 +1,574 @@
+#DsCounts {
+    font-size: 12px;
+    border: 2px ridge black;
+    border-spacing: 0px;
+    box-shadow: 20px 30px 8px rgba(0,0,0,0.3);
+    width: 580px;
+    white-space: nowrap;
+}
+
+#DsCounts thead {
+    border: 2px ridge black;
+}
+
+#DsCounts thead tr th{
+    border: 1px ridge white;
+    padding: 11px;
+    border-spacing: 0px;
+    vertical-align: middle;
+    text-align: center;
+    color: white;
+    background: linear-gradient(to top, #cbcbcb, #4e4e4e); /* Градиент */
+}
+
+#DsCounts tr td{
+    border: 1px ridge black;
+    padding: 10px;
+    border-spacing: 0px;
+    vertical-align: middle;
+}
+
+/*--------------------*/
+
+
+#DS {
+    font-size: 12px;
+    border: 2px ridge black;
+    border-spacing: 0px;
+    box-shadow: 20px 30px 8px rgba(0,0,0,0.3);
+    width: 95%;
+    table-layout: fixed;
+    margin-bottom: 80px;
+}
+
+#DS tr td{
+    border: 1px ridge black;
+    padding: 10px;
+    border-spacing: 0px;
+    vertical-align: middle;
+    overflow: hidden;
+    position: relative;
+}
+
+#DS tr td:not([bgcolor])::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 20px;
+    height: 100%;
+    background: -moz-linear-gradient(left, rgba(255, 204, 0, 0.2), #fc0 100%);
+    background: -webkit-linear-gradient(left, rgba(255, 204, 0, 0.2), #fc0 100%);
+    background: -o-linear-gradient(left, rgba(255, 204, 0, 0.2), #fc0 100%);
+    background: -ms-linear-gradient(left, rgba(255, 204, 0, 0.2), #fc0 100%);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255, 255, 255) 100%);
+}
+
+#DS thead tr th{
+    border: 1px ridge white;
+    padding: 11px;
+    border-spacing: 0px;
+    vertical-align: middle;
+    text-align: center;
+    color: white;
+    background: linear-gradient(to top, #cbcbcb, #4e4e4e); /* Градиент */
+}
+
+/*--------------------*/
+
+#engineers, #rf, #vc, #Alternate {
+    font-size: 12px;
+    border: 2px ridge black;
+    border-spacing: 0px;
+    box-shadow: 20px 30px 8px rgba(0,0,0,0.3);
+    width: 95%;
+    table-layout: fixed;
+    /*margin-bottom: 80px;*/
+}
+
+#engineers tr td, #rf tr td, #vc tr td, #Alternate tr td {
+    border: 1px ridge black;
+    padding: 10px;
+    border-spacing: 0px;
+    vertical-align: middle;
+    overflow: hidden;
+    position: relative;
+}
+
+#engineers tr td:not([bgcolor], .newId)::after, #rf tr td:not([bgcolor], .newId)::after, #vc tr td:not([bgcolor], .newId)::after, #Alternate tr td:not([bgcolor], .newId)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 20px;
+    height: 100%;
+    background: -moz-linear-gradient(left, rgba(255, 204, 0, 0.2), #fc0 100%);
+    background: -webkit-linear-gradient(left, rgba(255, 204, 0, 0.2), #fc0 100%);
+    background: -o-linear-gradient(left, rgba(255, 204, 0, 0.2), #fc0 100%);
+    background: -ms-linear-gradient(left, rgba(255, 204, 0, 0.2), #fc0 100%);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255, 255, 255) 100%);
+}
+
+#engineers thead tr th, #rf thead tr th, #vc thead tr th, #Alternate thead tr th {
+    border: 1px ridge white;
+    border-bottom: 2px ridge black;
+    padding: 11px;
+    border-spacing: 0px;
+    vertical-align: middle;
+    text-align: center;
+    color: white;
+    background: linear-gradient(to top, #cbcbcb, #4e4e4e); /* Градиент */
+}
+
+#engineers tr.newId td, #rf tr.newId td, #vc tr.newId td, #Alternate tr.newId td {
+    padding: 0;
+}
+
+tr.nowrap td {
+    white-space: nowrap;
+}
+
+tr.tdB td {
+    font-weight: bold;
+}
+
+#engineers .newId input[type="text"], #rf .newId input[type="text"], #vc .newId input[type="text"], #Alternate .newId input[type="text"]{
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    border: 0px;
+}
+
+input.delId, .addId:hover {
+    background: linear-gradient(to bottom, #cbcbcb, #4e4e4e);
+    color: #fff;
+}
+
+input.delId, .addId {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 7px 0px;
+    border: 3px outset rgb(221, 221, 221);
+    background: linear-gradient(to bottom, rgba(203, 203, 203, 0.06), rgba(78, 78, 78, 0.18));
+    color: #414141;
+    /* font-size: 14px; */
+    /* padding: 7px 20px; */
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    font-weight: normal;
+}
+
+#engineers tbody tr td:last-child, #rf tbody tr td:last-child, #vc tbody tr td:last-child, #Alternate tbody tr td:last-child {
+    padding: 0;
+}
+/*--------------------*/
+
+#map{
+    /*margin-top: -30px;*/
+    width: 100%;
+    height: 93vh;
+    border: 1px ridge black;
+    /*box-shadow: 20px 30px 8px rgba(0,0,0,0.3);*/
+}
+
+#vacation{
+    border-color: white;
+}
+.sitymenu {
+    text-align: center;
+}
+
+.sitymenu td {
+    padding: 4px;
+}
+
+.sitymenu tr td a {
+    display: inline-block;
+    padding: 5px 15px;
+    text-decoration: none;
+    color: #000;
+    width: 100%;
+    background: rgba(255,255,255,.8) !important;
+    -moz-border-radius: 300px 100px 300px 100px;
+    -khtml-border-radius: 300px 100px 300px 100px;
+    border-radius: 300px 100px 300px 100px;
+    -webkit-border-radius: 300px 100px 300px 100px;
+    webkit-box-shadow: 1px 5px 19px rgba(0,0,0,.35);
+    -moz-box-shadow: 1px 5px 19px rgba(0,0,0,.35);
+    box-shadow: 1px 5px 19px rgba(0,0,0,.35);
+}
+
+/*------------------------------------------------------*/
+
+.sitymenu tr td a:hover {
+    #box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Тень */
+    background: linear-gradient(to bottom, #cbcbcb, #4e4e4e); /* Градиент */
+    color: white;
+}
+
+.centerWidth{
+    margin: auto;
+    max-width: 40%;
+    min-width: 600px;
+}
+
+.centerWidth A{
+    border: hidden 1px;
+    color: #414141;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.centerWidth A > div{
+    display: inline-block;
+}
+
+.centerWidth A div:first-child{
+    /*text-align: center;*/
+    width: 77%;
+}
+
+.centerWidth A div:nth-child(2){
+    width: 5ex;
+    float: right;
+}
+
+.cityColumn {
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+    flex-flow: column wrap;
+    -webkit-flex-flow: column wrap;
+    -moz-flex-flow: column wrap;
+    -ms-flex-flow: column wrap;
+    -ms-flex-direction: column;
+    -ms-flex-wrap: wrap;
+
+    width: 33.33%;
+    /*height: expression( this.scrollHeight < 651 ? "650px" : "auto" );*/
+
+    height: 650px;
+
+    /*width: 33.33%;*/
+    /*min-width: 200px;*/
+    /*display: inline-block;*/
+    /*vertical-align: top;*/
+}
+
+.cityColumn > div {
+    min-width: 185px;
+    padding: 5px 15px;
+    margin: 5px 10px;
+    background: rgba(255,255,255,.8);
+    -moz-border-radius: 300px 100px 300px 100px;
+    -khtml-border-radius: 300px 100px 300px 100px;
+    border-radius: 300px 100px 300px 100px;
+    -webkit-border-radius: 300px 100px 300px 100px;
+    webkit-box-shadow: 1px 5px 19px rgba(0,0,0,.35);
+    -moz-box-shadow: 1px 5px 19px rgba(0,0,0,.35);
+    box-shadow: 1px 5px 19px rgba(0,0,0,.35);
+}
+
+.cityColumn > div:hover {
+    background: linear-gradient(to bottom, #cbcbcb, #4e4e4e); /* Градиент */
+    color: white;
+}
+
+.cityColumn a:hover {
+    color: white;
+}
+
+@media screen and (max-width: 650px){
+
+    *[class*='cityColumn']{
+        height: 100%;
+        min-width: 100%;
+        /*background:blue;*/
+        /*padding:50px;*/
+    }
+
+}
+
+.wrapper {
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.menuw tr td {
+    padding: 5px 20px; /* Поля */
+    width: 100%;
+
+}
+
+.menu tr td > a {
+    border: 1px solid #333; /* Рамка */
+    display: inline-block;
+    padding: 5px 15px; /* Поля */
+    text-decoration: none; /* Убираем подчёркивание */
+    background: linear-gradient(to bottom, rgb(74, 248, 255), rgba(0, 60, 255, 0.85)); /* Градиент */
+    color: #ffffff; /* Цвет текста */
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 5px;
+    -khtml-border-radius: 10px;
+}
+
+.menu tr td > a:hover {
+    #box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Тень */
+    background: linear-gradient(to bottom, #00abff, #fbff00); /* Градиент */
+    #background: linear-gradient(to bottom, rgb(0, 205, 255), rgba(7, 0, 255, 0.85)); /* Градиент */
+    color: white;
+}
+
+.center {
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+.emergingcity {
+    position: fixed;
+    padding: 5px;
+    text-align: center;
+    max-width: 30%;
+    visibility: hidden;
+    background: linear-gradient(to right, rgba(255,255,255,.8), rgba(255,255,255,.5)) !important;
+    border-radius: 11px 40px 70px 20px;
+    -webkit-border-radius: 11px 40px 70px 20px;
+    webkit-box-shadow: -10px 10px 20px rgba(0,0,0,0.15);
+    -moz-box-shadow: -10px 10px 20px rgba(0,0,0,0.15);
+    box-shadow: -10px 10px 20px rgba(0,0,0,0.15);
+}
+
+.emergingcity div {
+    float: left;
+    margin: 5px 0px;
+
+    opacity: 0;
+
+    -webkit-transform: rotateY(90deg);
+    -moz-transform: rotateY(90deg);
+    -ms-transform: rotateY(90deg);
+    -o-transform: rotateY(90deg);
+    transform: rotateY(90deg);
+
+    -webkit-transition: opacity .4s, -webkit-transform .5s;
+    -moz-transition: opacity .4s, -moz-transform .5s;
+    -ms-transition: opacity .4s, -ms-transform .5s;
+    -o-transition: opacity .4s, -o-transform .5s;
+    transition: opacity .4s, transform .5s;
+}
+
+.emergingcity div a {
+    /* border: 1px solid rgba(0,0,0,.35); */
+    padding: 5px;
+    text-decoration: none;
+    background: rgb(255, 255, 255);
+    color: #414141;
+    width: 100%;
+    border-radius: 5px 20px 10px 18px;
+    -webkit-border-radius: 5px 20px 10px 18px;
+    -moz-border-radius: 5px 20px 10px 18px;
+    -khtml-border-radius: 5px 20px 10px 18px;
+    box-shadow: 0px 1px 6px rgba(0,0,0,.35);
+    webkit-box-shadow: 0px 1px 6px rgba(0,0,0,.35);
+    -moz-box-shadow: 0px 1px 6px rgba(0,0,0,.35);
+}
+
+.emergingcity div a:hover {
+    background: linear-gradient(to bottom, #cbcbcb, #4e4e4e); /* Градиент */
+    color: white;
+}
+
+#home:hover .emergingcity div, #home:focus .emergingcity div, #tableMenu:hover .emergingcity div, #tableMenu:focus .emergingcity div {
+    opacity: 1;
+
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;
+}
+
+#home:hover .emergingcity, #tableMenu:hover .emergingcity {
+    visibility: visible;
+    z-index: 1;
+}
+
+
+
+
+/*-----------------------------------*/
+
+body {
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    background: #fff;
+    font-weight: 300;
+    font-size: 15px;
+    color: #333;
+    -webkit-font-smoothing: antialiased;
+}
+.navbar .nav > li > a {
+    color: #414141;
+    border-top: 0px solid transparent;
+    text-shadow: none;
+    font-size: 14px;
+    padding: 12px 20px;
+    padding: 12px 10px \9;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+#out {
+    font-family: 'Droid Sans';
+    border: none;
+    background-color: transparent;
+    color: #414141;
+    font-size: 14px;
+    padding: 7px 20px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+#out:hover {
+    background: #080808 !important;
+    color: #fff;
+}
+
+#form-out {
+    margin: 0;
+}
+
+/*--------------------------*/
+
+
+.vacationForm {
+    font-size: 12px;
+    border: 1px ridge black;
+    border-spacing: 0px;
+    box-shadow: 20px 30px 8px rgba(0,0,0,0.3);
+    width: 400px;
+    margin-bottom: 16px;
+    padding: 20px;
+}
+
+#vacationTab {
+    font-size: 12px;
+    border: 2px ridge black;
+    border-spacing: 0px;
+    box-shadow: 20px 30px 8px rgba(0,0,0,0.3);
+    width: 490px;
+}
+
+#vacationTab tr td{
+    border: 1px ridge black;
+    padding: 10px;
+    border-spacing: 0px;
+    vertical-align: middle;
+    overflow: hidden;
+    position: relative;
+}
+
+#vacationTab tr td:not([bgcolor], .newId)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 20px;
+    height: 100%;
+    background: -moz-linear-gradient(left, rgba(255, 204, 0, 0.2), #fc0 100%);
+    background: -webkit-linear-gradient(left, rgba(255, 204, 0, 0.2), #fc0 100%);
+    background: -o-linear-gradient(left, rgba(255, 204, 0, 0.2), #fc0 100%);
+    background: -ms-linear-gradient(left, rgba(255, 204, 0, 0.2), #fc0 100%);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255, 255, 255) 100%);
+}
+
+#vacationTab thead tr th{
+    border: 1px ridge white;
+    border-bottom: 2px ridge black;
+    padding: 11px;
+    border-spacing: 0px;
+    vertical-align: middle;
+    text-align: center;
+    color: white;
+    background: linear-gradient(to top, #cbcbcb, #4e4e4e); /* Градиент */
+}
+
+#vacationTab tbody tr td:last-child {
+    padding: 0;
+}
+
+#vacationTab tr.newId td {
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+
+textarea#vacationTexterea {
+    width: 100%;
+    max-width: 100%;
+    height: 125px;
+    max-height: 125px;
+    padding: 10px;
+    border: 0;
+    border-bottom: 1px ridge black;
+}
+
+.vacationFormTexterea {
+    font-size: 12px;
+    border: 1px ridge black;
+    border-spacing: 0px;
+    box-shadow: 20px 30px 8px rgba(0,0,0,0.3);
+    width: 600px;
+    height: 164px;
+    margin-bottom: 16px;
+    padding: 0px;
+    margin-bottom: 45px;
+}
+
+#borderOpenActualRSSList {
+    padding-top: 20px;
+    /*padding-bottom: 50px;*/
+}
+
+#buttonOpenActualRSSList {
+    display: block;
+    width: 95%;
+    padding: 7px 0px;
+    border: 3px outset rgb(221, 221, 221);
+    background: linear-gradient(to bottom, rgb(243, 243, 243), rgb(163, 163, 163));
+    color: #414141;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+
+}
+
+#buttonOpenActualRSSList:hover {
+    background: linear-gradient(to bottom, #cbcbcb, #4e4e4e);
+    color: #fff;
+}
+
+.ResoursIframe {
+    /*margin-top: 55px;*/
+    border: 2px ridge black;
+    border-spacing: 0px;
+    box-shadow: 20px 30px 8px rgba(0,0,0,0.3);
+    width: 95%;
+}
